@@ -1,0 +1,18 @@
+<template name="postsList">
+    <div class="posts page">
+        {{#each posts}}
+        {{> postItem}}
+        {{/each}}
+
+        {{#if nextPath}}
+        <a class="load-more" href="{{nextPath}}">Load more</a>
+        {{else}}
+        {{#unless ready}}
+        {{> spinner}}
+        {{/unless}}
+        {{/if}}
+    </div>
+</template>
+<!--Définir le helper de posts implique qu'il est maintenant disponible-->
+<!--// pour notre template, donc notre template sera capable de faire des itérations-->
+<!--// sur le tableau postsData, et d'envoyer chaque objet vers le template postItem.-->

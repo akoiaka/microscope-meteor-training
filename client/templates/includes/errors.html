@@ -1,0 +1,23 @@
+<template name="errors">
+    <div class="errors row-fluid">
+        {{#each errors}}
+        {{> error}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="error">
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{message}}
+    </div>
+</template>
+
+<!--Templates jumeaux-->
+
+<!--Vous noterez que nous mettons deux templates dans un seul fichier.
+Jusqu'à maintenant, nous avons essayé d'adhérer à la convention “un fichier,
+un template”, mais, pour Meteor, mettre tous vos templates dans un seul fichier fonctionne
+aussi bien (bien que cela rendrait main.html très confus !).-->
+
+<!--Dans ce cas, vu que les deux templates d'erreur sont plutôt courts, nous allons faire une exception et les mettre dans le même fichier pour rendre notre répertoire un peu plus clair.-->

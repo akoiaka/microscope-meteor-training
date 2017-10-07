@@ -1,0 +1,30 @@
+<!--&lt;!&ndash;ICI CONTENU DE CE AUI ETAIT ANCIENNEMENT "BODY" DANS HTML&ndash;&gt;-->
+
+<!--<div class="container">-->
+    <!--<header class="navbar navbar-default" role="navigation">-->
+        <!--<div class="navbar-header">-->
+            <!--<a class="" href="/">Microscope</a>-->
+        <!--</div>-->
+    <!--</header>-->
+<!--</div>-->
+<!--<div id="main">-->
+    <!--{{> postsList}}-->
+<!--</div>-->
+
+
+<!--ICI, Le fichier layout.html nouvellement créé -->
+<!--contiendra maintenant le layout extérieur de notre application :-->
+<!--Ce helper {{> yield}} va définir une zone dynamique qui va automatiquement
+afficher le template correspondant à la route courante (par convention,
+nous désignerons à partir de maintenant ce template spécial le “template de routage”) :-->
+
+
+<template name="layout">
+    <div class="container">
+        {{> header}}
+        {{> errors}}
+        <div id="main">
+            {{> yield}}
+        </div>
+    </div>
+</template>
